@@ -1,0 +1,401 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1892801792111118}
+  m_IsPrefabParent: 1
+--- !u!1 &1040860138171694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4360068474322802}
+  - component: {fileID: 23387491871425940}
+  - component: {fileID: 102597707126891198}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1892801792111118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4864703023037630}
+  - component: {fileID: 212098337275807680}
+  - component: {fileID: 114491249795235624}
+  - component: {fileID: 114774236611911386}
+  m_Layer: 0
+  m_Name: MessageBubble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4360068474322802
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040860138171694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.947, y: 1.38, z: -0.001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4864703023037630}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4864703023037630
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892801792111118}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.66, y: 5.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4360068474322802}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23387491871425940
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040860138171694}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 023172b2e82ba434fb6cd48d56371389, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!102 &102597707126891198
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040860138171694}
+  m_Text: 
+  m_OffsetZ: 0
+  m_CharacterSize: 0.05
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 100
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 12800000, guid: 023172b2e82ba434fb6cd48d56371389, type: 3}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4283256141
+--- !u!114 &114491249795235624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892801792111118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de20340d7687fba4faf9df35c4d6fbf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 102597707126891198}
+  parent: {fileID: 0}
+  citizenScale: 0.15
+  carScale: 0.2
+  soldierScale: 0.15
+  satelliteScale: 0.2
+  helicopterScale: 0.2
+  tankScale: 0.3
+  generalScale: 0.6
+  citizenOffset: {x: 0.1, y: 0.05, z: 0}
+  carOffset: {x: 0.15, y: 0.05, z: 0}
+  soldierOffset: {x: 0.1, y: 0.05, z: 0}
+  satelliteOffset: {x: 0.1, y: 0.1, z: 0}
+  helicopterOffset: {x: 0, y: 0, z: 0}
+  tankOffset: {x: 0, y: 0, z: 0}
+  generalOffset: {x: 0, y: 0, z: 0}
+  citizenQuotes:
+  - AHH!
+  - AHHH!!
+  - MOMMY!
+  - RUN!
+  - THE END IS NEAR!
+  - IT'S A BIRD
+  - IT'S A PLANE
+  - IT'S A CATERPILLAR???
+  - WHAT THE???
+  - HOLEE MOLEE!
+  - HELP!
+  - CALL 911!
+  - SAVE US!
+  - HOLY COW!
+  - NOOO!
+  - '@#$%'
+  - AW CRUD!
+  - I've fallen & I can't get up
+  - MY BACK!
+  - CHOCOLATE!!!
+  - MY FAMILY!
+  - GODZILLA!
+  - KAIJU!
+  - "\xA1CORRER!"
+  - "\xA1MI FAMILIA!"
+  - LEAVE ME!
+  - RUN FOR YOUR LIVES!
+  - AHHHH!!!
+  - AHHHHH!
+  - RUUUUN!
+  - Thanks Obama!
+  - BAMBOOZLED!
+  - GET IN THE CAR KIDS!
+  - ESCAPE!!!
+  - I SAW THIS IN A MOVIE!
+  - WE ARE DONE FOR!
+  - AHHH!
+  - SPARE ME!
+  - I'M NOT FOOD!
+  - IM SCARED!
+  - RUN AWAY!
+  - HELP ME!
+  - :(
+  - :o
+  - 'D:'
+  - GREAT SCOTT!
+  - FLYING CATERPILLAR?
+  - SPACE CATERPILLAR?
+  carQuotes:
+  - VROOM!
+  - CHOO CHOO!
+  - You'll never get me!
+  - VROOOM!
+  - REVV!
+  - VROOOOM!!
+  - GET TO THE FREEWAY!
+  - STEP ON IT!
+  - TAKE EXIT 42!
+  - Next right in quarter mile.
+  - 88 MPH!
+  - SCREECH!
+  - SEATBELTS ON!
+  - PEDAL TO THE METAL!
+  - LET'S GET OUT OF HERE!
+  - FULL SPEED AWAY!
+  - GET OUT OF THE WAY
+  - VROOOOOOOM!
+  - DON'T BLOCK THE ROAD!
+  - GET IN THE CAR!
+  - BEEP BEEP!
+  - HONK HONK!
+  - BEEP!
+  - I'M A TALKING CAR!
+  - HISSSS!
+  soldierQuotes:
+  - DOWN, VILE BEAST!!
+  - PERISH!
+  - ATTACK!
+  - CHARGE!
+  - EVACUATE!
+  - RAHHH!
+  - ARRRGHH!
+  - STAY BACK!
+  - FIGHT ME!
+  - FEAR ME!
+  - YOU DON'T SCARE ME!
+  - ZAP!
+  - TASTE MY LASER!
+  - YOU STAND NO CHANCE!
+  - WE OUTNUMBER YOU!
+  - GIT OFF OUR PLANET!
+  - BANG!
+  - FOR THE KING!
+  - ATTACK!!
+  - FOR GLORY!
+  - I BET THAT HURT!
+  - WE FIGHT FOR FREEDOM!
+  - I NEED A BIGGER GUN...
+  - RAWR
+  - PEW!
+  - PEW PEW!
+  - POW!
+  - BZZT!
+  - FOLLOW ME!
+  - DON'T EAT THEM!
+  satelliteQuotes:
+  - BUZZ!
+  - BEEP!
+  - ZAAAP!
+  - BOOP!
+  - BING!
+  - ROAR!
+  - SQUARE ROOT!
+  - E=Mc2
+  - a2+b2=c2
+  - -1/12
+  - 42
+  - WHIRRR!
+  - BZZT!
+  - CLANG
+  - BEEP
+  - R2D3
+  - STARS!
+  helicopterQuotes:
+  - I'LL BE BACK!
+  - OINK!
+  - SQUEAL!
+  - I CAN FLY!
+  - PORK CHOPPER!!!
+  - HOW DID I GET UP HERE!
+  - NECK STRAIN!
+  - I have the BEST hat!
+  - Eat more chickin!
+  - FIRE!
+  - OINK?
+  - SQUEAL?
+  - BURP!
+  - DOWNLOAD LIFTOFF!
+  - ROFLCOPTER!
+  - WOOSH!
+  - WHY AM I FLYING?
+  tankQuotes:
+  - FIRE!
+  - BOOM!
+  - VROOM!
+  - RUMBLE!
+  - CRUSH!
+  - REVV!
+  - TARGET ACQUIRED!
+  - BLAST IT OFF THIS PLANET!
+  - FULLY SPEED AHEAD!
+  - TAKE IT OUT!
+  - ONWARDS!
+  - PROTECT THE CITIZENS
+  - HA! I HAVE ARMOR!
+  - READY AIM FIRE!
+  - I'M A TALKING TANK
+  generalQuotes:
+  - FEAR ME!
+  - SMASH!
+  - I COMMAND YOU TO DIE!
+  - I COMMAND YOU TO PERISH!
+  - I'LL SMASH YOU!
+  - I'VE FACED WORSE!
+  - SOLDIERS, ATTACK!
+  - MARCH!
+  - ONWARD!
+  - HAHA!
+  - CRUSH!
+  - ARRGH!
+  - I'M MEAN AND GREEN!
+  - THE GRINCH 2.0!
+  - YOU'LL NEVER WIN!
+  - GIVE UP NOW!
+  - MASHED CATERPILLAR!
+  - IN FORMATION!
+  - TOUCH ME, YOU DIE!
+  - GET BACK HERE!
+  - I'M ANGRY!
+  - I'M HANGRY!
+  - CATERPILLAR = DINNER
+  - YOU FLY!
+  - YOU VILE CREATURE!
+  - KNOCK YOUR SOCKS OFF!
+  - GO AWAY!
+  - ALL UNITS ATTACK!
+  - WHY AM I SO BIG?
+--- !u!114 &114774236611911386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892801792111118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e00e2064940bd499a83a95649d653b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 2
+--- !u!212 &212098337275807680
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892801792111118}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 7134cc442f1f449439a1f1a785d685cf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.12, y: 2.56}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Building
+  - Dirt
+  - Core
+  - Character
+  - Bullet
+  - Helicopter
+  - Tank
+  - General
+  - Car
+  - Soldier
+  - Satellite
+  - TutorialButton
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Buildings
+  - Worm
+  - Dirt
+  - WormHead
+  - Chracters
+  - Bullets
+  - Satellites
+  - Helicopter
+  - HelicopterHolder
+  - Decor
+  - Pulling
+  - General
+  - Missile
+  - Triggers
+  - Gem
+  - Clouds
+  - CloudPoofs
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

@@ -1,0 +1,144 @@
+play = "New game"
+highscore = "Highscores"
+bright = "Visual Brightness"
+volume = "Volume"
+quit = "quit"
+
+playPressed = 0
+
+local function load()
+	width = love.window.getWidth()
+	height = love.window.getHeight()
+	playPressed = 0
+	font = love.graphics.newFont("NotepaperAirplanes.ttf", 72)
+end
+
+local function update(dt)
+	love.graphics.setColor(255, 255, 255)
+	love.graphics.print(play, width/2, height/6)
+	love.graphics.print(highscore, width/2, height*2/6)
+	love.graphics.print(bright, width/2, height*3/6)
+	love.graphics.print(volume, width/2, height*4/6)
+	love.graphics.print(quit, width/2, height*5/6)
+	
+	--[[local x, y = love.mouse.getPosition()
+	if y < height / 4 then
+	playPressed = 0
+	elseif y < height * 5 / 12 then 
+	playPressed = 1
+	elseif y < height * 7 / 12 then
+	playPressed = 2
+	elseif y < height * 3/4 then 
+	playPressed = 3
+	else
+	playPressed = 4
+	end	]]	
+end
+
+local function draw()
+	if (playPressed == 0) then 
+		love.graphics.setColor(0, 0, 255)
+		love.graphics.print(play, width/2, height/6)
+	else
+		love.graphics.setColor(255, 255, 255)
+		love.graphics.print(play, width/2, height/6)
+	end
+	if (playPressed == 1) then 
+		love.graphics.setColor(0, 0, 255)
+		love.graphics.print(highscore, width/2, 2*height/6)
+	else
+		love.graphics.setColor(255, 255, 255)
+		love.graphics.print(highscore, width/2, 2*height/6)
+	end
+		
+	if (playPressed == 2) then 
+		love.graphics.setColor(0, 0, 255)
+		love.graphics.print(bright, width/2, 3*height/6)
+	else
+		love.graphics.setColor(255, 255, 255)
+		love.graphics.print(bright, width/2, 3*height/6)
+	end
+	
+	if (playPressed == 3) then 
+		love.graphics.setColor(0, 0, 255)
+		love.graphics.print(volume, width/2, 4*height/6)
+	else
+		love.graphics.setColor(255, 255, 255)
+		love.graphics.print(volume, width/2, 4*height/6)
+	end
+	if (playPressed == 4) then 
+		love.graphics.setColor(0, 0, 255)
+		love.graphics.print(quit, width/2, 5*height/6)
+	else
+		love.graphics.setColor(255, 255, 255)
+		love.graphics.print(quit, width/2, 5*height/6)
+	end
+			
+end
+
+local function keypressed(key)
+      if key == 'up' then
+      	  
+      	 playPressed = (playPressed -1)%5
+	
+      end
+
+      if key == 'down' then
+      	 
+      	 playPressed = (playPressed + 1)%5
+	
+      end
+
+      if key == ' ' then
+      	 
+      	 if playPressed == 0 then
+	    gameStateIndex = 3
+		currentState = gameStates[3]
+		currentState:load()
+	 end
+
+	 if playPressed == 1 then
+	    	print(playPressed)
+ 		gameStateIndex = 4
+		currentState = gameStates[4]
+		currentState:load()
+	end
+      end
+
+      print(playPressed)
+end
+
+local function keyreleased(key)
+
+end
+
+function mousepressed(x, y, button)
+	--[[print(y)
+	print(height)
+	gameStateIndex = 3
+	currentState = gameStates[gameStateIndex]
+	currentState:load()
+	local xl, yl = love.mouse.getPosition()
+	if yl < height / 4 then
+		gameStateIndex = 3
+		currentState = gameStates[3]
+		currentState:load()
+	elseif yl < height * 5 / 12 then 
+		gameStateIndex = 4
+		currentState = gameStates[4]
+		currentState:load()
+	elseif yl < height * 3/4 then 
+	else
+		love.event.quit()
+	end
+	]]
+end
+
+return {
+	load = load,
+	update = update,
+	draw = draw,
+	keypressed = keypressed,
+	keyreleased = keyreleased,
+	mousepressed = mousepressed
+}

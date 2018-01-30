@@ -1,0 +1,90 @@
+{
+	"hero": {
+		"speed" : 3.5,
+		"speedBoost" : 180,
+		"undergroundMultiplier" : 2.5,
+		"undergroundSlow": 0.75,
+		"isUnderground" : false,
+		"health" : 1000,
+		"maxHealth" : 1460,
+		"maxHealthIncrease": 40,
+	    "segmentCount" : 5
+    },
+	"mole": {
+		"initspawn" : -25,
+		"spawninc" : 30,
+		"chance" : 0.005,
+		"damage": 100
+    },
+    "bird1": {
+    	"initspawn" : 10,
+    	"spawninc" : 35,
+		"bulletDamageBase": 30
+    },
+    "bird2": {
+    	"initspawn" : 50,
+    	"spawninc" : 27
+    },
+    "bear": {
+    	"initspawn" : -100,
+    	"spawninc" : 30,
+
+    	"chance" : 0.002,
+    	"floatheight" : 120
+    },
+    "turret": {
+    	"chance" : 0.025,
+		"shootDelay": 0.9
+    },
+    "camera": {
+    	"scale" : 0.4,
+		"zoomOutScale": 1,
+		"juiceLevel": 6
+		
+    },
+	"generator": {
+    	"stdDev" : 2
+    },
+	"powerups": {
+		"hits": 3,
+    	"hitDelay" : 1.5,
+    	"rampage": 6,
+		"health": {
+			"health": 200
+		},
+		"freeze": {
+			"freeze": 10
+		}
+    },
+	"starvationRate": 30,
+	"starvationIncreasePercentage": 0.15,
+	"switchTime": 3,
+	"tutDelay": 8,
+	"sideDist": 1200,
+	"hittableDelay": 0.5,
+	"pauseButtonScale": 0.7,
+	"pauseMenuScale": 1.5,
+	"healAmount": 50,
+	"blackDelay": 0.07,
+	"maxGoals": 10,
+	"boss1": {
+		"health": 20,
+		"bosspawn": -1,
+		"spawninc": 0.2
+	},
+	"boss2": {
+		"health": 30
+	},
+	"combo": {
+		"delay": 2
+	},
+	"highscores": {
+		"maxScores": 30,
+		"maxNameLength": 10,
+		"fileName": "scores.json",
+		"defaultName": "Anon"
+	},
+	"loading": {
+		"swipeTime": 0.5
+	}
+}

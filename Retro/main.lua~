@@ -1,0 +1,114 @@
+titleScreen = require("titleScreen")
+gameScreen = require("gameScreen")
+highScoreScreen = require("highScoreScreen")
+menuScreen = require("menuScreen")
+
+animation = require("animation")
+alien.__index = animation
+
+alien = require("aliens")
+alien.__index = alien
+setmetatable(alien, animation)
+
+gameStateIndex = 1
+gameStates = { titleScreen, menuScreen, gameScreen, highScoreScreen }
+
+currentState = {}
+currentState.__index = currentState
+speed = 5
+enemies = {}
+
+time = 0
+
+function love.load()
+	
+	width = love.window.getWidth()
+	height = love.window.getHeight()
+
+	--[[hero = { x = width/2, y = height/2, sound}
+	hero.Img = love.graphics.newImage("heroImg.png")
+	hero.pixelWidth = hero.Img:getWidth()/2
+	hero.pixelHeight = hero.Img:getHeight()/2
+	hero.sound = love.audio.newSource("boop.wav")
+	print(alien.xv)
+	setmetatable(hero, alien)]]
+	
+	for i = 0, 10 do
+		table.insert(enemies, newEnemy())
+	end
+	
+	background = {
+		Img = love.graphics.newImage("space.jpg"),
+	}
+	background.width = background.Img:getWidth()
+	background.height = background.Img:getHeight()
+
+	currentState = titleScreen
+	currentState:load() 
+	song = love.audio.newSource("external.xm")
+	song:setLooping(true)
+	song:play()
+	
+end
+
+function love.update(dt)
+	currentState:update(dt)
+	time = time + dt
+	for _, e in ipairs(enemies) do
+	    e:update(dt)
+	end
+
+	--hero:update(dt)
+end
+
+function love.draw()
+	currentState:draw()
+end
+
+function love.mousepressed(x, y, button) 
+	currentState:mousepressed(x, y, button)
+end
+
+function newEnemy() 
+	local e = { img = love.graphics.newImage("enemy.png"), xv = math.random(-speed, speed), yv = math.random(-speed, speed) }  	
+	--local e = alien.create("enemy.png", 20, 20, 3, 1)
+	--e.img = love.graphics.newImage("enemy.png")
+	--e.xv = math.random(-speed, speed)
+	--e.yv = math.random(-speed, speed)
+	e.scale = .3
+	e.pixelWidth = e.img:getWidth()*.3
+	e.pixelHeight = e.img:getHeight()*.3
+
+	e.x = math.random(0, width-e.pixelWidth)
+	e.y = math.random(0, height-e.pixelHeight)
+
+	setmetatable(e, alien)
+	return e
+end
+
+love.keyboard.setKeyRepeat(false)
+
+function love.keypressed(key)
+	if key == ' ' and gameStateIndex ~= 2 then
+		gameStateIndex = gameStateIndex + 1
+		if gameStateIndex == 5 then
+			gameStateIndex = 2
+		end
+		currentState = gameStates[gameStateIndex]
+		currentState:load()
+	end
+	currentState.keypressed(key)
+end
+
+function love.keyreleased(key)
+	currentState.keyreleased(key)
+end
+
+
+
+
+
+
+
+
+

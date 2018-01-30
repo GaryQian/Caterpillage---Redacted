@@ -1,0 +1,65 @@
+Controls:
+	The worm will move towards your mouse. Click to shoot.
+	If you use arrow keys or WASD, then the game will change control scheme to keyboard.
+	Push esc to pause the game/see whole planet
+
+	It is RECOMMENDED to use the mouse for an easier and more enjoyable experience
+	
+Goal:
+	Shoot or eat all of the enemies before you die of starvation. Dodge enemy bullets.
+
+Changes since last time:
+	Added a second boss: Bird boss - shoots a bunch of armybirds.
+	Boss now has scaling health as you progress further.
+	Alternating bosses between moleboss and birdboss.
+	Removed boost mechanic - it was not very useful and just made the game needlessly complicated.
+
+	Setup for Android and iOS port
+	Sucessfully ported to android. (Optimizations still required to make it run smoothly)
+	Began manual garbage collection to reduce RAM usage at critical points
+	Remove hero bullets if hero bullets go past 10 instances.
+	Optimized images to be smaller and run better on android.
+	Reduced resolution of space background to improve mobile performance
+	Began implementation of advertisement module
+	Cleaned up some leaking variables between each planet generation.
+	Successfully prevent frequent Android crashes up to ~level 4
+	APK file available at request. Email gqian1@jhu.edu if you want to test it.
+	Slight rebalancing.
+	Reduced amount of scenery to improve FPS on slower machines and mobile.
+	
+	
+Cheats:
+	h: More health
+	i: invincibility (hold)
+	o: lose health x10 speed (hold)
+	k: kill 3 random enemies
+	e: exit and return to menu
+	n: next level
+	
+# Credits
+
+* Code
+-- Chris Meseha cmeseha1@jhu.edu
+-- Matthew Tan mtan13@jhu.edu
+-- Gary Qian gqian1@jhu.edu
+
+* Music
+	Computer Boop
+	fordps3
+	http://www.freesound.org/people/fordps3/sounds/186669/
+
+	Hybrid Song
+	Quazar of Saxion
+	modarchive.org/index.php?request=view_by_moduleid&query=66187
+	
+	Going To Prom
+	www.freesound.org
+	
+	Fist Full of Adventure
+	www.freesound.org
+	
+	Silent Ghost
+	www.freesound.org
+
+* Graphics
+-- Hamima Halim hhalim@jhu.edu

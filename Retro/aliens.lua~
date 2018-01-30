@@ -1,0 +1,36 @@
+local alien = {
+      	    x = 0, y = 0,
+            xv = 0, yv = 0,
+            pixelWidth = 0, pixelHeight = 0,
+            draw = function(self)
+                love.graphics.draw(self.img,
+                                self.x, self.y,                                
+                                0, 0.3)
+	    end,
+	    update = function(self, dt)
+         if self.xv < -speed or self.xv > speed then
+            self.xv = 0
+         end
+
+         if self.yv < -speed or self.yv > speed then
+            self.yv = 0
+         end
+         self.x = self.x + self.xv
+         self.y = self.y + self.yv                                             
+
+          if self.x < 0 or self.x > width-self.pixelWidth then
+                if (self == hero) then
+                        hero.sound:play()
+                end
+                self.xv = -1 * self.xv
+         end
+         if self.y < 0 or  self.y > height-self.pixelHeight then
+                if (self == hero) then
+                        hero.sound:play()
+                end
+                self.yv = -1 * self.yv
+         end
+	 end
+}
+
+return alien
